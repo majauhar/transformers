@@ -139,6 +139,17 @@ class HubertConfig(PretrainedConfig):
             instance of [`HubertForSequenceClassification`].
         classifier_proj_size (`int`, *optional*, defaults to 256):
             Dimensionality of the projection before token mean-pooling for classification.
+        pad_token_id (`int`, *optional*, defaults to 0):
+            Corresponds to the [blank token](https://distill.pub/2017/ctc/) of the CTC algorithm.
+            Should be defined in [`Wav2Vec2CTCTokenizer`] or [`Wav2Vec2Processor`].
+            Could be associated with a `tokenizer` as `tokenizer.pad_token_id` or with a `processor` as `processor.tokenizer.pad_token_id`
+        bos_token_id (`int`, *optional*, defaults to 1):
+            A special token representing the beginning of a sentence.
+            Could be associated with a `tokenizer` as `tokenizer.bos_token_id` or with a `processor` as `processor.tokenizer.bos_token_id`
+        eos_token_id (`int`, *optional*, defaults to 2):
+            A special token representing the end of a sentence.
+            Could be associated with a `tokenizer` as `tokenizer.eos_token_id` or with a `processor` as `processor.tokenizer.eos_token_id`
+        
 
     Example:
 
