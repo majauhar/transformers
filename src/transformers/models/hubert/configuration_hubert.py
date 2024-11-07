@@ -140,9 +140,8 @@ class HubertConfig(PretrainedConfig):
         classifier_proj_size (`int`, *optional*, defaults to 256):
             Dimensionality of the projection before token mean-pooling for classification.
         pad_token_id (`int`, *optional*, defaults to 0):
-            Corresponds to the "blank token" of CTC algorithm. For more info, look at this [blog](https://distill.pub/2017/ctc/)
-            Should be defined in the `tokenizer` of class [`Wav2Vec2CTCTokenizer`](https://huggingface.co/docs/transformers/en/main_classes/tokenizer) 
-            and/or the `processor` of class [`Wav2Vec2Processor`](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2#transformers.Wav2Vec2Processor)
+            Corresponds to the [blank token](https://distill.pub/2017/ctc/) of the CTC algorithm.
+            Should be defined in [`Wav2Vec2CTCTokenizer`] or [`Wav2Vec2Processor`].
             Could be associated with a `tokenizer` as `tokenizer.pad_token_id` or with a `processor` as `processor.tokenizer.pad_token_id`
         bos_token_id (`int`, *optional*, defaults to 1):
             A special token representing the beginning of a sentence.
