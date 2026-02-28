@@ -18,12 +18,10 @@ limitations under the License.
 
 Installez 🤗 Transformers pour n'importe quelle librairie d'apprentissage profond avec laquelle vous avez l'habitude de travaillez, configurez votre cache et configurez 🤗 Transformers pour un usage hors ligne (facultatif).
 
-🤗 Transformers est testé avec Python 3.6+, PyTorch 1.1.0+, TensorFlow 2.0+ et Flax.
+🤗 Transformers est testé avec Python 3.10+ et PyTorch 2.4+.
 Consulter les instructions d'installation ci-dessous pour la librairie d'apprentissage profond que vous utilisez:
 
   * Instructions d'installation pour [PyTorch](https://pytorch.org/get-started/locally/).
-  * Instructions d'installation pour [TensorFlow 2.0](https://www.tensorflow.org/install/pip).
-  * Instructions d'installation pour [Flax](https://flax.readthedocs.io/en/latest/).
 
 ## Installation avec pip
 
@@ -60,31 +58,6 @@ Par exemple, installez 🤗 Transformers et PyTorch avec la commande suivante :
 
 ```bash
 pip install 'transformers[torch]'
-```
-
-🤗 Transformers et TensorFlow 2.0 :
-
-```bash
-pip install 'transformers[tf-cpu]'
-```
-
-<Tip warning={true}>
-
-Pour les architectures mac M1 / ARM
-
-Vous devez installer les outils suivants avant d'installer TensorFLow 2.0
-
-```bash
-brew install cmake
-brew install pkg-config
-```
-
-</Tip>
-
-🤗 Transformers et Flax :
-
-```bash
-pip install 'transformers[flax]'
 ```
 
 Vérifiez que 🤗 Transformers a bien été installé avec la commande suivante. La commande va télécharger un modèle pré-entraîné :
@@ -130,7 +103,7 @@ cd transformers
 pip install -e .
 ```
 
-Ces commandes créent des liens entre le dossier où le projet a été cloné et les chemins de vos librairies Python. Python regardera maintenant dans le dossier que vous avez cloné en plus des dossiers où sont installées vos autres librairies. Par exemple, si vos librairies Python sont installées dans `~/anaconda3/envs/main/lib/python3.7/site-packages/`, Python cherchera aussi dans le dossier où vous avez cloné : `~/transformers/`.
+Ces commandes créent des liens entre le dossier où le projet a été cloné et les chemins de vos librairies Python. Python regardera maintenant dans le dossier que vous avez cloné en plus des dossiers où sont installées vos autres librairies. Par exemple, si vos librairies Python sont installées dans `~/anaconda3/envs/main/lib/python3.10/site-packages/`, Python cherchera aussi dans le dossier où vous avez cloné : `~/transformers/`.
 
 <Tip warning={true}>
 
@@ -157,17 +130,11 @@ conda install conda-forge::transformers
 
 ## Configuration du cache
 
-Les modèles pré-entraînés sont téléchargés et mis en cache localement dans le dossier suivant : `~/.cache/huggingface/hub`. C'est le dossier par défaut donné par la variable d'environnement `TRANSFORMERS_CACHE`. Sur Windows, le dossier par défaut est `C:\Users\nom_utilisateur\.cache\huggingface\hub`. Vous pouvez modifier les variables d'environnement indiquées ci-dessous - par ordre de priorité - pour spécifier un dossier de cache différent :
+Les modèles pré-entraînés sont téléchargés et mis en cache localement dans le dossier suivant : `~/.cache/huggingface/hub`. C'est le dossier par défaut donné par la variable d'environnement `HF_HUB_CACHE`. Sur Windows, le dossier par défaut est `C:\Users\nom_utilisateur\.cache\huggingface\hub`. Vous pouvez modifier les variables d'environnement indiquées ci-dessous - par ordre de priorité - pour spécifier un dossier de cache différent :
 
-1. Variable d'environnement (par défaut) : `HUGGINGFACE_HUB_CACHE` ou `TRANSFORMERS_CACHE`.
+1. Variable d'environnement (par défaut) : `HF_HUB_CACHE`.
 2. Variable d'environnement : `HF_HOME`.
 3. Variable d'environnement : `XDG_CACHE_HOME` + `/huggingface`.
-
-<Tip>
-
-🤗 Transformers utilisera les variables d'environnement `PYTORCH_TRANSFORMERS_CACHE` ou `PYTORCH_PRETRAINED_BERT_CACHE` si vous utilisez une version précédente de cette librairie et avez défini ces variables d'environnement, sauf si vous spécifiez la variable d'environnement `TRANSFORMERS_CACHE`.
-
-</Tip>
 
 ## Mode hors ligne
 

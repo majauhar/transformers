@@ -34,11 +34,16 @@ Learn how to quantize models in the [Quantization](../quantization) guide.
 
 [[autodoc]] AqlmConfig
 
+## VptqConfig
+
+[[autodoc]] VptqConfig
+
 ## AwqConfig
 
 [[autodoc]] AwqConfig
 
 ## EetqConfig
+
 [[autodoc]] EetqConfig
 
 ## GPTQConfig
@@ -53,9 +58,21 @@ Learn how to quantize models in the [Quantization](../quantization) guide.
 
 [[autodoc]] quantizers.base.HfQuantizer
 
+## HiggsConfig
+
+[[autodoc]] HiggsConfig
+
 ## HqqConfig
 
 [[autodoc]] HqqConfig
+
+## MetalConfig
+
+[[autodoc]] MetalConfig
+
+## Mxfp4Config
+
+[[autodoc]] Mxfp4Config
 
 ## FbgemmFp8Config
 
@@ -69,6 +86,34 @@ Learn how to quantize models in the [Quantization](../quantization) guide.
 
 [[autodoc]] TorchAoConfig
 
-## BitNetConfig
+## BitNetQuantConfig
 
-[[autodoc]] BitNetConfig
+[[autodoc]] BitNetQuantConfig
+
+## SpQRConfig
+
+[[autodoc]] SpQRConfig
+
+## FineGrainedFP8Config
+
+[[autodoc]] FineGrainedFP8Config
+
+## QuarkConfig
+
+[[autodoc]] QuarkConfig
+
+## FourOverSixConfig
+
+[[autodoc]] FourOverSixConfig
+
+## FPQuantConfig
+
+[[autodoc]] FPQuantConfig
+
+## AutoRoundConfig
+
+[[autodoc]] AutoRoundConfig
+
+## SinqConfig
+
+[[autodoc]] SinqConfig

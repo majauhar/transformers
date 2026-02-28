@@ -23,33 +23,31 @@
     title: تحميل النماذج المخصصة وتدريبها باستخدام 🤗 PEFT
   - local: model_sharing
     title: مشاركة نموذجك
-  - local: agents
-    title: الوكلاء
   - local: llm_tutorial
     title: التوليد باستخدام LLMs
   - local: conversations
     title: الدردشة مع المحولات
   title: البرامج التعليمية
-# - sections:
-#   - isExpanded: false
-#     sections:
-#     - local: tasks/sequence_classification
-#       title: تصنيف النصوص
-#     - local: tasks/token_classification
-#       title: تصنيف الرموز
-#     - local: tasks/question_answering
-#       title: الإجابة على الأسئلة
-#     - local: tasks/language_modeling
-#       title: نمذجة اللغة السببية
-#     - local: tasks/masked_language_modeling
-#       title: نمذجة اللغة المقنعة
-#     - local: tasks/translation
-#       title: الترجمة
-#     - local: tasks/summarization
-#       title: التلخيص
-#     - local: tasks/multiple_choice
-#       title: الاختيار المتعدد
-#     title: معالجة اللغات الطبيعية
+- sections:
+  - isExpanded: false
+    sections:
+    - local: tasks/sequence_classification
+      title: تصنيف النصوص
+    - local: tasks/token_classification
+      title: تصنيف الرموز
+    - local: tasks/question_answering
+      title: الإجابة على الأسئلة
+    - local: tasks/language_modeling
+      title: نمذجة اللغة السببية
+    - local: tasks/masked_language_modeling
+      title: نمذجة اللغة المقنعة
+    - local: tasks/translation
+      title: الترجمة
+    - local: tasks/summarization
+      title: التلخيص
+    - local: tasks/multiple_choice
+      title: الاختيار المتعدد
+    title: معالجة اللغات الطبيعية
 #   - isExpanded: false
 #     sections:
 #     - local: tasks/audio_classification
@@ -73,8 +71,6 @@
 #       title: تصنيف الصور بدون تدريب
 #     - local: tasks/monocular_depth_estimation
 #       title: تقدير العمق
-#     - local: tasks/image_to_image
-#       title: صورة إلى صورة
 #     - local: tasks/image_feature_extraction
 #       title: استخراج ميزات الصورة
 #     - local: tasks/mask_generation
@@ -107,10 +103,10 @@
 #     - local: tasks/prompting
 #       title: دليل إرشادي لمحفزات النماذج اللغوية الكبيرة
 #     title: الإرشاد
-#   title: أدلة المهام
+  title: أدلة المهام
 - sections:
   - local: fast_tokenizers
-    title: استخدم مجزئيات النصوص السريعة من 🤗 Tokenizers 
+    title: استخدم مجزئيات النصوص السريعة من 🤗 Tokenizers
   - local: multilingual
     title: الاستدلال باستخدام نماذج متعددة اللغات
   - local: create_a_model
@@ -119,26 +115,26 @@
     title: مشاركة نموذج مخصص
   - local: chat_templating
     title: قوالب لنماذج الدردشة
-#   - local: trainer
-#     title: المدرب
-#   - local: sagemaker
-#     title: تشغيل التدريب على Amazon SageMaker
-#   - local: serialization
-#     title: التصدير إلى ONNX
-  - local: tflite
-    title: التصدير إلى TFLite
-#   - local: torchscript
-#     title: التصدير إلى TorchScript
-#   - local: benchmarks
-#     title: المعايير
-#   - local: notebooks
-#     title: دفاتر الملاحظات مع الأمثلة
-#   - local: community
-#     title: موارد المجتمع
-#   - local: troubleshooting
-#     title: استكشاف الأخطاء وإصلاحها
+  - local: trainer
+    title: المدرب
+  - local: sagemaker
+    title: تشغيل التدريب على Amazon SageMaker
+  - local: serialization
+    title: التصدير إلى ONNX
+  - local: notebooks
+    title: دفاتر الملاحظات مع الأمثلة
+  - local: community
+    title: موارد المجتمع
+  - local: troubleshooting
+    title: استكشاف الأخطاء وإصلاحها
   - local: gguf
     title: التوافق مع ملفات GGUF
+  - local: tiktoken
+    title: التوافق مع ملفات TikToken
+  - local: modular_transformers
+    title: الوحدات النمطية في `transformers`
+  - local: how_to_hack_models
+    title: اختراق النموذج (الكتابة فوق فئة لاستخدامك)
   title: أدلة المطورين
 # - sections:
 #   - local: quantization/overview
@@ -151,6 +147,8 @@
 #     title: AWQ
 #   - local: quantization/aqlm
 #     title: AQLM
+#   - local: quantization/vptq
+#     title: VPTQ
 #   - local: quantization/quanto
 #     title: Quanto
 #   - local: quantization/eetq
@@ -180,8 +178,6 @@
 #       title: التدريب الفعال على وحدة المعالجة المركزية (CPU)
 #     - local: perf_train_cpu_many
 #       title: التدريب الموزع لوحدة المعالجة المركزية (CPU)
-#     - local: perf_train_tpu_tf
-#       title: التدريب على (TPU) باستخدام TensorFlow
 #     - local: perf_train_special
 #       title: تدريب PyTorch على Apple silicon
 #     - local: perf_hardware
@@ -199,8 +195,6 @@
 #     title: إنشاء نموذج كبير
 #   - local: debugging
 #     title: تصحيح الأخطاء البرمجية
-#   - local: tf_xla
-#     title: تكامل XLA لنماذج TensorFlow
 #   - local: perf_torch_compile
 #     title: تحسين الاستدلال باستخدام `torch.compile()`
 #   title: الأداء وقابلية التوسع
@@ -246,8 +240,6 @@
   title: أطر مفاهيمية
 # - sections:
 #   - sections:
-#     - local: main_classes/agent
-#       title: الوكلاء والأدوات
 #     - local: model_doc/auto
 #       title: فئات يتم إنشاؤها ديناميكيًا
 #     - local: main_classes/backbones
@@ -258,16 +250,12 @@
 #       title: التكوين
 #     - local: main_classes/data_collator
 #       title: مجمع البيانات
-#     - local: main_classes/keras_callbacks
-#       title: استدعاءات Keras
 #     - local: main_classes/logging
 #       title: التسجيل
 #     - local: main_classes/model
 #       title: النماذج
 #     - local: main_classes/text_generation
 #       title: توليد النصوص
-#     - local: main_classes/onnx
-#       title: ONNX
 #     - local: main_classes/optimizer_schedules
 #       title: التحسين
 #     - local: main_classes/output
@@ -875,7 +863,7 @@
 #     - local: internal/pipelines_utils
 #       title: مرافق خطوط الأنابيب
 #     - local: internal/tokenization_utils
-#       title: مرافق مقسم النصوص 
+#       title: مرافق مقسم النصوص
 #     - local: internal/trainer_utils
 #       title: مرافق المدرب
 #     - local: internal/generation_utils
